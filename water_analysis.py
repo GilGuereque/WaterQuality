@@ -6,13 +6,13 @@ df = pd.read_csv('./.data/water_potability.csv')
 
 print(df.head())
 
-df["ph"].fillna(df["ph"].median(), inplace=True)
+df["ph"].fillna(df["ph"].median(), inplace=True) # Handle outliers
 
 print(df.head())
 
-df["Sulfate"].fillna(df["Sulfate"].mean(), inplace=True)
+df["Sulfate"].fillna(df["Sulfate"].mean(), inplace=True) # Handle outliers
 
-df["Trihalomethanes"].fillna(0, inplace=True)
+df["Trihalomethanes"].fillna(df["Trihalomethanes"].median(), inplace=True) # Handle outliers
 
 print(df.head())
 
