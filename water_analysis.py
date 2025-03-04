@@ -59,3 +59,6 @@ for i, col in enumerate(columns_to_visualize, 1):
 
 plt.tight_layout()
 plt.show()
+
+## TODO: Load the dataset into PowerBI and build some visualizations ?
+## Save the cleaned data to a new CSV file
