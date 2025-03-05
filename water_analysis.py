@@ -60,5 +60,13 @@ for i, col in enumerate(columns_to_visualize, 1):
 plt.tight_layout()
 plt.show()
 
+print(df.isnull().sum())  # Ensure all NaNs are handled
+
+df.to_csv('./.data/water_potability_cleaned_standardized.csv', index=False)
+
+connection.commit()
+connection.close()
+
+
 ## TODO: Load the dataset into PowerBI and build some visualizations ?
 ## Save the cleaned data to a new CSV file
